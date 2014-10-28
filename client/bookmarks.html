@@ -1,0 +1,46 @@
+<head>
+  <title>bookmarks</title>
+</head>
+
+<body>
+  <h1>Bookmarks</h1>
+
+  {{> user}}
+  {{> groups}}
+
+</body>
+
+<template name="user">
+  {{> profile currentUser}}
+</template>
+
+<template name="groups">
+  <ul>
+  {{#each groups}}
+    {{> profile this}}
+  {{/each}}
+  </ul>
+
+</template>
+
+<template name="profile">
+  <div><img class="img" src="{{icon}}"/> {{name}}</div>
+
+  <ul>
+    {{#each bookmarks}}
+      {{> bookmark}}
+    {{/each}}
+  </ul>
+
+  <form>
+    <input type="text" name="bookmarkLabel"/>
+    <button>Add Bookmark</button>
+  </form>
+
+  <hr/>
+
+</template>
+
+<template name="bookmark">
+  <li><img src="map.png"/> {{label}} - <button>Remove</button></li>
+</template>

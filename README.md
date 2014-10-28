@@ -1,4 +1,4 @@
-bookmarks
+Bookmarks
 =========
 
-CPOF style bookmarks example done in MeteorJS
+Collaborative bookmarks example done in MeteorJS.
